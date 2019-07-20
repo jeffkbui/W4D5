@@ -22,16 +22,16 @@ class Array
     min
   end
 
-  # def my_max #phase 1: O(n^2)
-  #   arr = []
+  def my_max #phase 1: O(n^2)
+    arr = []
 
-  #   (0...self.length).each do |idx1|
-  #     (idx1...self.length).each do |idx2|
-  #         arr << self[idx1..idx2]        
-  #     end
-  #   end
-  #   arr.map { |sub| sub.sum }.max
-  # end
+    (0...self.length).each do |idx1|
+      (idx1...self.length).each do |idx2|
+          arr << self[idx1..idx2]        
+      end
+    end
+    arr.map { |sub| sub.sum }.max
+  end
 
   def my_max #phase 2: time - O(n) space - O(1)
     max_sum = 0
